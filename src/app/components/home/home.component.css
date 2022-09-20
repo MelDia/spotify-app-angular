@@ -1,0 +1,43 @@
+.card-columns {
+    column-count: 5;
+}
+
+.card {
+    background-color: #181818;
+    transition: background-color 200ms ease-out 100ms;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.card:hover {
+    background-color: #282828;
+}
+
+.module {
+    margin: 0 0 1em 0;
+    overflow: hidden;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+img {
+    padding: 20px;
+    border-radius: 25px;
+    width: 245px;
+    height: 245px;
+}
+
+h6,
+p {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: 14px;
+    color: #838383;
+}

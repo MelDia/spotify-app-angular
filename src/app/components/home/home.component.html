@@ -1,0 +1,12 @@
+<app-spinner *ngIf="loading"></app-spinner>
+
+<div class="card-columns animated fadeIn">
+    <div *ngFor="let new of newReleases"  class="card mb-4">
+        <img [src]="new.images[1].url" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h6 class="card-title line-clamp module">{{new.name}}</h6>
+            <p (click)="goArtist(new)" style="cursor: pointer;" class="card-text">{{new.artists[0].name}}</p>
+        </div>
+    </div>
+</div>
+

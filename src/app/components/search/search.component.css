@@ -1,0 +1,136 @@
+.container-search {
+    margin: 40px 50px 50px 50px;
+}
+
+h3 {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 800px;
+    margin-left: 240px;
+}
+
+.input {
+    box-sizing: border-box;
+    color: #191919;
+    padding: 15px 15px 15px 35px;
+    width: 100%;
+    border-radius: 40px;
+    outline: none;
+}
+
+.input.password {
+    padding: 15px 35px 15px 15px;
+}
+
+.input-icon {
+    color: #191919;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 755px;
+    top: 55%;
+    transform: translateY(-50%);
+}
+
+.input-icon.password {
+    left: unset;
+    right: 12px;
+}
+
+input[type="search"] {
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    background-color: #121212;
+    border: none;
+}
+
+.card-columns {
+    column-count: 1;
+}
+
+.artist {
+    background-color: #181818;
+    transition: background-color 200ms ease-out 100ms;
+    height: 350px;
+    border-radius: 10px;
+
+    max-width: 800px;
+    height: 320px;
+}
+
+.artist:hover {
+    background-color: #282828;
+}
+
+.artist-img {
+    height: 150px;
+    width: 150px;
+    margin-top: 28px;
+    margin-left: 28px;
+    border-radius: 50%;
+    filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.7));
+}
+
+.artist-name {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.badge {
+    background-color: #131313;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.track {
+    background-color: #121212;
+    transition: background-color 200ms ease-out 100ms;
+    height: 65px;
+    border-radius: 10px;
+}
+
+.track:hover {
+    background-color: #282828;
+    height: 65px;
+    border-radius: 10px;
+}
+
+.track-img {
+    height: 55px;
+    width: 55px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.track-name {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+.track-artist {
+    color: #838383;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.track-time {
+    color: #838383;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+

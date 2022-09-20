@@ -1,0 +1,135 @@
+<div class="card mb-3 animated fadeIn">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img [src]="artist.images | noimage" class="art-img" alt="..." width="640px" height="640px">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body" style="margin-top: 35px;">
+                <p class="card-text "> <i class="bi bi-patch-check-fill"
+                        style="font-size: 1rem; color: cornflowerblue;margin-right: 10px;"></i> Verified artist </p>
+                <h5 class="card-title art-name">{{artist.name}}</h5>
+                <div class="row">
+                    <div class="col">
+                        <p class="card-text ms-1" style="margin-top: 7px;">{{artist.followers.total | number}} monthly
+                            listeners</p>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn art-btn">FOLLOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="topTracks">
+    <div class="row ">
+        <div class="col-md-6">
+            <div *ngIf="topTracks.length != 0" class="row g-0">
+                <h3>Top tracks</h3>
+            </div>
+            <div *ngFor="let top of topTracks; let i = index " class="card mb-2" style="height: 65px">
+                <div class="row g-0 track ">
+                    <div class="col-1">
+                        <p style="margin: 20px">{{i +1 }}</p>
+                    </div>
+                    <div class="col-2">
+                        <img [src]="top.album.images | noimage" class="track-img img-fluid " alt="...">
+                    </div>
+                    <div class="col-9">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="row">
+                                        <h6 class="mb-0 card-title line-clamp module track-name">{{top.album.name}}</h6>
+                                    </div>
+                                    <div class="row">
+                                        <p class="mb-0 track-artist">{{top.artists[0].name}}</p>
+                                    </div>
+
+                                </div>
+                                <div class="col-2">
+                                    <p class="m-0 track-time">{{top.duration_ms | date:'mm:ss'}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" style="margin-top: 40px;">
+            <div *ngFor="let top of topTracksTwo; let i = index " class="card mb-2" style="height: 65px">
+                <div class="row g-0 track ">
+                    <div class="col-1">
+                        <p style="margin: 20px">{{i +6 }}</p>
+                    </div>
+                    <div class="col-2">
+                        <img [src]="top.album.images | noimage" class="track-img img-fluid " alt="...">
+                    </div>
+                    <div class="col-9">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-10">
+                                    <div class="row">
+                                        <h6 class="mb-0 card-title line-clamp module track-name">{{top.album.name}}</h6>
+                                    </div>
+                                    <div class="row">
+                                        <p class="mb-0 track-artist">{{top.artists[0].name}}</p>
+                                    </div>
+
+                                </div>
+                                <div class="col-2">
+                                    <p class="m-0 track-time">{{top.duration_ms | date:'mm:ss'}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="discography">
+    <div class="row ">
+
+        <div class="col-12">
+            <div *ngIf="discography.length != 0" class="row g-0">
+                <h3>Discography</h3>
+            </div>
+            <div class="card-columns ">
+                <div *ngFor="let new of discography"  class="card card-album mb-4">
+                    <img [src]="new.images | noimage" class="card-img-top img-album" alt="...">
+                    <div class="card-body">
+                        <h6 class="card-title line-clamp module">{{new.name}}</h6>
+                        <p class="card-text disco-date">{{new.release_date | date:'yyyy'}} • {{new.album_type}}</p>
+                    </div>
+                </div>
+            </div>            
+
+        </div>
+
+    </div>
+</div>
+
+<div class="relatedArtists">
+    <div class="row ">
+
+        <div class="col-12">
+            <div *ngIf="discography.length != 0" class="row g-0">
+                <h3>Related artists</h3>
+            </div>
+            <div class="card-columns ">
+                <div *ngFor="let new of related"  class="card card-album mb-4">
+                    <img (click)="goArtist(new)" style="cursor: pointer;" [src]="new.images | noimage" class="card-img-top img-album" alt="...">
+                    <div class="card-body">
+                        <h6 (click)="goArtist(new)" style="cursor: pointer;" class="card-title line-clamp module">{{new.name}}</h6>
+                        <p class="card-text art-type">{{new.type | uppercase}}</p>
+                    </div>
+                </div>
+            </div>            
+
+        </div>
+
+    </div>
+</div>
